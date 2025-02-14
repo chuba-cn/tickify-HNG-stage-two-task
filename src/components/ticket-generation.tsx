@@ -82,7 +82,7 @@ export function TicketGeneration({
 
 
                   {ticketData.profileImage && (
-                    <div className="relative w-48 h-48 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-teal glow-effect">
+                    <div className="relative w-32 h-32 md:h-48 md:w-48 mx-auto mb-6 rounded-2xl overflow-hidden border-4 border-teal glow-effect">
                       <Image
                         src={ticketData.profileImage || "/placeholder.svg"}
                         alt="Profile"
@@ -92,43 +92,42 @@ export function TicketGeneration({
                     </div>
                   )}
 
-
-                  <div className="rounded-xl overflow-hidden bg-surface-secondary/30 backdrop-blur-sm border border-teal/20 px-3">
-                    <div className="grid grid-cols-2 divide-x divide-teal/20 pt-3 font-roboto justify-items-start overflow-x-hidden">
-                      <div className="p-4 w-full text-left">
-                        <p className="text-white/60 text-sm">Enter your name</p>
-                        <p className="text-white font-bold mt-1 truncate">
+                  <div className="rounded-xl overflow-x-hidden bg-surface-secondary/30 backdrop-blur-sm border border-teal/20 px-1 md:px-3">
+                    <div className="grid grid-cols-2 divide-x divide-teal/20 pt-1 md:pt-3 font-roboto">
+                      <div className="p-1 md:p-4 w-full text-left">
+                        <p className="text-white/60 text-xs md:text-sm max-sm:truncate">Enter your name</p>
+                        <p className="text-white font-bold mt-1 text-xs md:text-base truncate">
                           {ticketData.fullName}
                         </p>
                       </div>
-                      <div className="p-4 w-full text-left">
-                        <p className="text-white/60 text-sm">
+                      <div className="p-1 md:p-4 w-full text-left">
+                        <p className="text-white/60 text-xs md:text-sm max-sm:truncate">
                           Enter your email *
                         </p>
-                        <p className="text-white font-bold mt-1 truncate">
+                        <p className="text-white font-bold mt-1 text-xs md:text-base truncate">
                           {ticketData.email}
                         </p>
                       </div>
                     </div>
 
                     <div className="grid grid-cols-2 divide-x divide-teal/20 border-t border-teal/20 justify-items-start">
-                      <div className="p-4 text-left">
-                        <p className="text-white/60 text-sm">Ticket Type:</p>
-                        <p className="text-white font-medium font-roboto mt-1"> 
+                      <div className="p-1 md:p-4 text-left">
+                        <p className="text-white/60 text-xs md:text-sm max-sm:truncate">Ticket Type:</p>
+                        <p className="text-white font-medium font-roboto mt-1 text-xs md:text-base"> 
                           {ticketData.ticketType}
                         </p>
                       </div>
-                      <div className="p-4 text-left">
-                        <p className="text-white/60 text-sm">Ticket for :</p>
-                        <p className="text-white font-medium font-roboto mt-1">
+                      <div className="p-1 md:p-4 text-left">
+                        <p className="text-white/60 text-xs md:text-sm max-sm:truncate">Ticket for :</p>
+                        <p className="text-white font-medium font-roboto mt-1 text-xs md:text-base">
                           {ticketData.quantity}
                         </p>
                       </div>
                     </div>
 
-                    <div className="p-4 border-t border-teal/20 text-left">
-                      <p className="text-white/60 text-sm">Special request?</p>
-                      <p className="text-white font-medium font-roboto mt-1">
+                    <div className="p-1 md:p-4 border-t border-teal/20 text-left">
+                      <p className="text-white/60 text-xs md:text-sm max-sm:truncate">Special request?</p>
+                      <p className="text-white font-medium font-roboto mt-1 text-xs md:text-base">
                         {ticketData.specialRequest || "No special requests"}
                       </p>
                     </div>

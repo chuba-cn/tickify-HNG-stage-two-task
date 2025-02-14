@@ -41,7 +41,7 @@ export default function TicketTypeForm({
   resetStep,
   currentStep,
 }: TicketTypeFormProps) {
-  
+
   const form = useForm<TicketTypeValues>({
     resolver: zodResolver(ticketTypeSchema),
     defaultValues: async () => {
@@ -104,7 +104,7 @@ export default function TicketTypeForm({
           />
         </div>
 
-        <div className="mt-8 flex flex-col md:p-6 md:border md:border-surface-secondary bg-surface-muted md:rounded-[2rem]">
+        <div className="mt-8 flex flex-col md:p-6 md:border md:border-surface-secondary md:bg-surface-muted md:rounded-[2rem]">
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl border border-surface-secondary/30" />
             <div className="absolute inset-[1px] rounded-2xl border border-surface-secondary/10" />

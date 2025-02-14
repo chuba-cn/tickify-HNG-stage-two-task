@@ -103,7 +103,7 @@ export function AttendeeDetailsForm({
           />
         </div>
 
-        <div className="mt-8 flex flex-col md:p-6 md:border md:border-surface-secondary bg-surface-muted md:rounded-[2rem]">
+        <div className="mt-8 flex flex-col md:p-6 md:border md:border-surface-secondary md:bg-surface-muted md:rounded-[2rem]">
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
               <div className="space-y-4">

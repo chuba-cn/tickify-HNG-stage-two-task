@@ -1,7 +1,7 @@
-import type { Config } from "tailwindcss";
 import tailwindAnimate from "tailwindcss-animate";
+import { withUt } from "uploadthing/tw";
 
-const config: Config = {
+export default withUt({
   darkMode: ["class"],
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,8 +12,8 @@ const config: Config = {
     extend: {
       fontFamily: {
         jeju: ["var(--font-jeju)"],
-        roboto: [ "var(--font-roboto)" ],
-        roadRage: ["var(--font-road-rage)"]
+        roboto: ["var(--font-roboto)"],
+        roadRage: ["var(--font-road-rage)"],
       },
       colors: {
         background: "hsl(var(--background))",
@@ -83,5 +83,7 @@ const config: Config = {
     },
   },
   plugins: [tailwindAnimate],
-};
-export default config;
+});
+
+// const config: Config = ;
+// export default config;
